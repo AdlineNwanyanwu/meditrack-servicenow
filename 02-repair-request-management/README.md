@@ -3,90 +3,102 @@
 
 ## My Role: Repair Request Lead (Member 2)
 
-**Project:** MediTrack — Medical Equipment Management  
 **Platform:** ServiceNow  
+**Application:** MediTrack  
 **Team:** Langston Team — Group 2  
-**Role:** Repair Request Lead  
-**Status:** In Development
+**Role:** Repair Request Lead
 
 ## Overview
 
-As the Repair Request Lead for MediTrack, I am responsible for designing, configuring, and testing the Repair Request Management component of our custom ServiceNow application.
+As Repair Request Lead, I worked on the development, configuration, and functional testing of the Repair Request Management component within MediTrack.
 
-This component enables healthcare staff to report faulty medical equipment and supports the tracking of repair requests throughout their lifecycle.
+The component supports medical equipment repair reporting, request tracking, assignment, prioritization, and resolution management.
 
-## My Technical Responsibilities
+## My Technical Contributions
 
-### 1. Repair Request Table
-- Configure the custom Repair Request table.
-- Define fields and data types.
-- Establish equipment reference relationships.
-- Configure appropriate field properties.
+### 1. Custom Table Configuration
+- Configured the Repair Request table extending Task.
+- Worked with custom fields and reference relationships.
+- Connected repair requests to Medical Equipment records.
 
-### 2. Forms and Lists
-- Configure the Repair Request form.
-- Organize fields for efficient data entry.
-- Configure list layouts and filters.
-- Support request tracking through status and priority fields.
+[View Table Configuration](repair-request-table-configuration.md)
 
-### 3. Service Catalog
-- Configure the "Report Faulty Equipment" catalog item.
-- Define submission variables.
-- Support the creation of repair requests through the catalog.
-- Test the request submission process.
+### 2. Form Configuration
+- Configured the Repair Request form.
+- Organized equipment, reporting, priority, assignment, and resolution fields.
+- Configured mandatory fields for data entry.
 
-### 4. Business Rules and Validation
-- Test priority calculation.
-- Validate equipment-based assignment.
-- Verify closure requirements.
-- Test resolution tracking.
-- Validate repair request status transitions.
+[View Form Configuration](repair-request-form-configuration.md)
 
-### 5. Functional Testing
-- Create sample repair requests.
-- Test field behavior.
-- Verify record creation and updates.
-- Document errors and troubleshooting.
-- Validate the repair request lifecycle.
+### 3. List Configuration
+- Configured the Repair Request list view.
+- Displayed ticket numbers, priorities, states, assignments, and descriptions.
+- Supported record search, filtering, and navigation.
 
-## Repair Request Lifecycle
+[View List Configuration](repair-request-list-configuration.md)
 
-The planned repair process follows:
+### 4. Business Rule Testing
 
-1. Request Submitted
-2. Triage
-3. Assignment
-4. Repair In Progress
-5. Resolution
-6. Closure
+Validated five functional scenarios:
 
-The implemented states and transitions will be documented based on the final ServiceNow configuration.
+| Test ID | Feature | Result |
+|---------|---------|--------|
+| BR-001 | Automatic Priority Calculation | PASS |
+| BR-002 | Equipment-Based Auto Assignment | PASS |
+| BR-003 | Closure Validation | PASS |
+| BR-004 | Automatic Resolution Tracking | PASS |
+| BR-005 | Repair Request Lifecycle | PASS |
 
-## Technologies and Skills
+**Results: 5/5 Passed**
 
-- ServiceNow App Engine
-- Custom Tables
+[View Business Rule Testing](business-rule-testing.md)
+
+### 5. Service Catalog Implementation
+
+Configured the **Report Faulty Equipment** Record Producer.
+
+Features include:
+- Six catalog variables
+- Equipment reference selection
+- Department and issue details
+- Impact and urgency selection
+- Links to supporting knowledge articles
+- Integration with the Repair Request table
+
+[View Service Catalog Implementation](service-catalog-implementation.md)
+
+### 6. Record Producer Submission Testing
+
+Successfully generated Repair Request **REP002093**.
+
+Verified:
+- Equipment Record: EQ0001
+- Department: ICU
+- Impact: 1 - High
+- Urgency: 1 - High
+- Priority: 1 - Critical
+- Assignment Group: MediTrack Biomedical Engineering
+
+**Test Result: PASS**
+
+[View Submission Test](record-producer-submission-testing.md)
+
+## ServiceNow Skills Demonstrated
+
+- Custom Table Configuration
+- Task Table Inheritance
 - Forms and Lists
 - Reference Fields
 - Service Catalog
-- Business Rules
+- Record Producers
+- Business Rule Testing
+- Priority Calculation
+- Assignment Routing
 - Functional Testing
-- Troubleshooting
 - Technical Documentation
 
-## Technical Documentation
+## Project Status
 
-This section will include:
+Repair Request component configuration and documented functional tests completed.
 
-- Repair Request Table Configuration
-- Form and List Configuration
-- Service Catalog Implementation
-- Business Rule Testing
-- Functional Test Cases
-- Configuration Screenshots
-
-## Development Status
-
-In Development
-
-Configuration details, test results, and screenshots will be added as implementation is verified.
+Additional integration testing and final application validation may be performed as the overall MediTrack project progresses.
