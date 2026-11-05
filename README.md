@@ -1,4 +1,3 @@
-
 # 🏥 MediTrack — Medical Equipment Management System
 
 ### A ServiceNow Custom Application
